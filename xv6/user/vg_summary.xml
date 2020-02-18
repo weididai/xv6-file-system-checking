@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: /tmp/tmpNne29j/p/./xcheck /u/c/s/cs537-1/ta/tests/5a-new/images/goodrefcnt</line>
+</preamble>
+
+<pid>24225</pid>
+<ppid>24224</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind.bin</exe>
+    <arg>--show-reachable=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--child-silent-after-fork=yes</arg>
+    <arg>--undef-value-errors=no</arg>
+    <arg>--xml-file=/tmp/tmpNne29j/p/vg_summary.xml</arg>
+  </vargv>
+  <argv>
+    <exe>/tmp/tmpNne29j/p/./xcheck</exe>
+    <arg>/u/c/s/cs537-1/ta/tests/5a-new/images/goodrefcnt</arg>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.025 </time>
+</status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>InvalidWrite</kind>
+  <what>Invalid write of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x4009C9</ip>
+      <obj>/tmp/tmpNne29j/p/xcheck</obj>
+      <fn>main</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xfff01c770 is not stack'd, malloc'd or (recently) free'd</auxwhat>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:00.286 </time>
+</status>
+
+<errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x0</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+
